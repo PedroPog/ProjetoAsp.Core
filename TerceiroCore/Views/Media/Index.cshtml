@@ -1,0 +1,34 @@
+﻿@model TerceiroCore.Models.ModelMedia
+@{
+    
+}
+<h2>Aula 01 - Bloco B</h2>
+@using (Html.BeginForm("Index", "Media", FormMethod.Post, new { enctype = "multpart/form-data" }))
+{
+    @Html.LabelFor(m => m.Jan)
+    <br />
+    @Html.EditorFor(m => m.Jan)
+    <br />
+
+    @Html.LabelFor(m => m.Fer)
+    <br />
+    @Html.EditorFor(m => m.Fer)
+    <br />
+
+    @Html.LabelFor(m => m.Mar)
+    <br />
+    @Html.EditorFor(m => m.Mar)
+    <br />
+
+    @Html.LabelFor(m => m.Abr)
+    <br />
+    @Html.EditorFor(m => m.Abr)
+    <br />
+    <input type="submit" name="btnCalc" value="Calcular" />
+}
+<br />
+@ViewBag.soma
+<br />
+@ViewBag.media
+<br />
+@ViewBag.res

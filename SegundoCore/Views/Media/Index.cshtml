@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Aula 01</h3>
+
+<form action="media/Index" method="post">
+
+    <label>Janeiro</label><br />
+    <input type="number" name="txtJan" value=""/><br/>
+
+    <label>Fevereiro</label><br />
+    <input type="number" name="txtFev" value="" /><br />
+
+    <label>Março</label><br />
+    <input type="number" name="txtMar" value="" /><br />
+
+    <label>Abrir</label><br />
+    <input type="number" name="txtAbr" value="" /><br />
+
+    <input type="submit" name="btnCalc" value="Calcular" /><br />
+
+</form>
+<br />
+@ViewBag.soma
+<br />
+@ViewBag.media
+<br />
+@ViewBag.res
