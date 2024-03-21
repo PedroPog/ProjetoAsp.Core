@@ -7,7 +7,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="cadlivro">Create New</a>
+    <a asp-controller="livro" asp-action="cadlivro">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -17,6 +17,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.nomeLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.refAutor.nomeAutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.refAutor.status)
             </th>
             <th></th>
         </tr>
@@ -31,9 +37,16 @@
                 @Html.DisplayFor(modelItem => item.nomeLivro)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.DisplayFor(modelItem => item.refAutor.nomeAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.refAutor.status)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "editarLivro", new {  id=item.codLivro }) |
+                @* @Html.ActionLink("Details", "Details", new {  id=item.codLivro  }) | *@
+                @Html.ActionLink("Delete", "Delete", new {  id=item.codLivro  },
+                new {onclick = "return confirm('Deseja realmente Excluir este Item?');"})
             </td>
         </tr>
 }

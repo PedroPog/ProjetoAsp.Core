@@ -30,12 +30,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcQ2FkQXV0b3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/3DS/Documents/3ds.2/ProjetoAppLivraria/Views/Autor/editarAutor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcZWRpdGFyQXV0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/3DS/Documents/3ds.2/ProjetoAppLivraria/Views/Autor/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0b3JcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/3DS/Documents/3ds.2/ProjetoAppLivraria/Views/Livro/CadLivro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2cm9cQ2FkTGl2cm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/3DS/Documents/3ds.2/ProjetoAppLivraria/Views/Livro/editarLivro.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGl2cm9cZWRpdGFyTGl2cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/3DS/Documents/3ds.2/ProjetoAppLivraria/Views/Livro/Index.cshtml]

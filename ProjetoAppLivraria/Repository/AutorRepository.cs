@@ -15,7 +15,19 @@ namespace ProjetoAppLivraria.Repository
         }
         public void Atualizar(Autor autor)
         {
-            throw new NotImplementedException();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE tbautor SET nomeAutor=@nomeAutor, " +
+                    "sta=@sta " +
+                    "WHERE codAutor=@codAutor;", conexao);
+                cmd.Parameters.Add("@codAutor", MySqlDbType.VarChar).Value = autor.Id;
+                cmd.Parameters.Add("@nomeAutor", MySqlDbType.VarChar).Value = autor.nomeAutor;
+                cmd.Parameters.Add("@sta", MySqlDbType.VarChar).Value = autor.status;
+
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
         }
 
         public void Cadastrar(Autor autor)
@@ -36,12 +48,38 @@ namespace ProjetoAppLivraria.Repository
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("delete from tbautor where codAutor=@codAutor", conexao);
+                cmd.Parameters.AddWithValue("@codAutor", id);
+                int i = cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
         }
 
         public Autor ObterAutor(int Id)
         {
-            throw new NotImplementedException();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM tbautor "+
+                    " WHERE codAutor=@codAutor;", conexao);
+                cmd.Parameters.AddWithValue("@codAutor", Id);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                MySqlDataReader dr;
+
+                Autor autor = new Autor();
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dr.Read())
+                {
+                    autor.Id = Convert.ToInt32(dr["codAutor"]);
+                    autor.nomeAutor = (string)(dr["nomeAutor"]);
+                    autor.status = Convert.ToString(dr["sta"]);
+                }
+                return autor;
+            }
         }
 
         public IEnumerable<Autor> ObterTodosAutores()

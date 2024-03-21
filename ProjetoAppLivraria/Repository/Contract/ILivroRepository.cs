@@ -7,7 +7,7 @@ namespace ProjetoAppLivraria.Repository.Contract
         IEnumerable<Livro> ObterTodosLivors();
         void Cadastrar(Livro livro);
         void Atualizar(Livro livro);
-        Livro ObterLivro(Livro livro);
+        Livro ObterLivro(int id);
         void Excluir(int Id);
     }
 }

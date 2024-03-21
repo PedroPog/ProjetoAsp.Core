@@ -14,7 +14,18 @@ namespace ProjetoAppLivraria.Repository
         }
         public void Atualizar(Livro livro)
         {
-            throw new NotImplementedException();
+            using(var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE tblivro SET nomeLivro=@nomeLivro, codAutor=@codAutor " +
+                    "WHERE codLivro=@codLivro;", conexao);
+                cmd.Parameters.Add("@codLivro", MySqlDbType.VarChar).Value = livro.codLivro;
+                cmd.Parameters.Add("@nomeLivro", MySqlDbType.VarChar).Value = livro.nomeLivro;
+                cmd.Parameters.Add("@codAutor", MySqlDbType.VarChar).Value = livro.refAutor.Id;
+
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
         }
 
         public void Cadastrar(Livro livro)
@@ -35,12 +46,46 @@ namespace ProjetoAppLivraria.Repository
 
         public void Excluir(int Id)
         {
-            throw new NotImplementedException();
+            using(var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("delete from tblivro where codLivro=@codLivro", conexao);
+                cmd.Parameters.AddWithValue("@codLivro", Id);
+                int i = cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
         }
 
-        public Livro ObterLivro(Livro livro)
+
+        public Livro ObterLivro(int Id)
         {
-            throw new NotImplementedException();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM tblivro as t1 " +
+                    "INNER JOIN tbautor as t2 ON t1.codAutor = t2.codAutor WHERE codLivro=@codLivro;", conexao);
+                cmd.Parameters.AddWithValue("@codLivro", Id);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                MySqlDataReader dr;
+
+                Livro livro = new Livro();
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dr.Read())
+                {
+                    livro.codLivro = Convert.ToInt32(dr["codLivro"]);
+                    livro.nomeLivro = (string)(dr["nomeLivro"]);
+                    livro.refAutor = new Autor()
+                    {
+                        Id = Convert.ToInt32(dr["codAutor"]),
+                        nomeAutor = (string)(dr["nomeAutor"]),
+                        status = Convert.ToString(dr["sta"])
+                    };
+
+                }
+                return livro;
+
+            }
         }
 
         public IEnumerable<Livro> ObterTodosLivors()

@@ -746,3 +746,4 @@ C:\Users\3DS\Documents\3ds.2\ProjetoAppLivraria\obj\Debug\net8.0\refint\ProjetoA
 C:\Users\3DS\Documents\3ds.2\ProjetoAppLivraria\obj\Debug\net8.0\ProjetoAppLivraria.pdb
 C:\Users\3DS\Documents\3ds.2\ProjetoAppLivraria\obj\Debug\net8.0\ProjetoAppLivraria.genruntimeconfig.cache
 C:\Users\3DS\Documents\3ds.2\ProjetoAppLivraria\obj\Debug\net8.0\ref\ProjetoAppLivraria.dll
+C:\Users\3DS\Documents\3ds.2\ProjetoAppLivraria\obj\Debug\net8.0\ProjetoAppLivraria.sourcelink.json
