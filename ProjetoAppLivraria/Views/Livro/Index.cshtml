@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<ProjetoAppLivraria.Models.Livro>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista Livro";
 }
 
-<h1>Index</h1>
+<h1>Lista Livro</h1>
 
 <p>
     <a asp-controller="livro" asp-action="cadlivro">Create New</a>
@@ -13,16 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.codLivro)
+                @Html.DisplayNameFor(model => model.idlivro)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.nomeLivro)
+                @Html.DisplayNameFor(model => model.namelivro)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.refAutor.nomeAutor)
+                @Html.DisplayNameFor(model => model.refautor.nameautor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.refAutor.status)
+                @Html.DisplayNameFor(model => model.refautor.status)
             </th>
             <th></th>
         </tr>
@@ -31,21 +31,21 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.codLivro)
+                @Html.DisplayFor(modelItem => item.idlivro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nomeLivro)
+                @Html.DisplayFor(modelItem => item.namelivro)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.refAutor.nomeAutor)
+                @Html.DisplayFor(modelItem => item.refautor.nameautor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.refAutor.status)
+                @Html.DisplayFor(modelItem => item.refautor.status)
             </td>
             <td>
-                @Html.ActionLink("Edit", "editarLivro", new {  id=item.codLivro }) |
+                    @Html.ActionLink("Edit", "editarLivro", new { id = item.idlivro }) |
                 @* @Html.ActionLink("Details", "Details", new {  id=item.codLivro  }) | *@
-                @Html.ActionLink("Delete", "Delete", new {  id=item.codLivro  },
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idlivro },
                 new {onclick = "return confirm('Deseja realmente Excluir este Item?');"})
             </td>
         </tr>

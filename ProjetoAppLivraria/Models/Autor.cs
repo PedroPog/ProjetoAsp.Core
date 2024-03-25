@@ -6,12 +6,12 @@ namespace ProjetoAppLivraria.Models
     public class Autor
     {
         [Display(Name = "Código")]
-        public int Id { get; set; }
+        public int idautor { get; set; }
 
         [Display(Name = "Autor")]
-        public string nomeAutor { get; set; }
+        public string nameautor { get; set; }
 
         [Display(Name = "Status")]
-        public string status { get;set; }
+        public String status { get;set; }
     }
 }

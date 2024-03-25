@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\PrimeiroCore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\repository\\autorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\repository\\livrorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\controllers\\autorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\controllers\\livrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\repository\\contract\\iautorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F62B371-3F88-4F3B-9D8E-A5811CB42E49}|..\\ProjetoAppLivraria\\ProjetoAppLivraria.csproj|e:\\users\\pog\\documents\\asp.netcore\\projetoasp.core\\projetoapplivraria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAB2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-25T01:52:09.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAutorRepository.cs",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\Contract\\IAutorRepository.cs",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Repository\\Contract\\IAutorRepository.cs",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\Contract\\IAutorRepository.cs",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Repository\\Contract\\IAutorRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:50:30.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LivroController.cs",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Controllers\\LivroController.cs",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Controllers\\LivroController.cs",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Controllers\\LivroController.cs",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Controllers\\LivroController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwBgAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:49:27.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AutorController.cs",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Controllers\\AutorController.cs",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Controllers\\AutorController.cs",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Controllers\\AutorController.cs",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Controllers\\AutorController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:49:11.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AutorRepository.cs",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\AutorRepository.cs",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Repository\\AutorRepository.cs",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\AutorRepository.cs",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Repository\\AutorRepository.cs",
+              "ViewState": "AQIAAGsAAAAAAAAAAADwv3YAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:48:51.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LivroRepository.cs",
+              "DocumentMoniker": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\LivroRepository.cs",
+              "RelativeDocumentMoniker": "..\\ProjetoAppLivraria\\Repository\\LivroRepository.cs",
+              "ToolTip": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\ProjetoAppLivraria\\Repository\\LivroRepository.cs",
+              "RelativeToolTip": "..\\ProjetoAppLivraria\\Repository\\LivroRepository.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAcwBMAAABXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:48:15.296Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

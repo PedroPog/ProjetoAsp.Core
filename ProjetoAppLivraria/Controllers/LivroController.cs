@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using ProjetoAppLivraria.Models;
-using ProjetoAppLivraria.Repository;
 using ProjetoAppLivraria.Repository.Contract;
 
 namespace ProjetoAppLivraria.Controllers
@@ -23,38 +22,38 @@ namespace ProjetoAppLivraria.Controllers
         }
         public IActionResult CadLivro()
         {
-            var listaAutor = _autorRepository.ObterTodosAutores();
+            var listaAutor = _autorRepository.ObterTodosAutoresAtivo();
             var ObjAutor = new Livro
             {
-                ListaAutor = (List<Autor>)listaAutor
+                idautor = (List<Autor>)listaAutor
             };
-            ViewBag.ListaAutores = new SelectList(listaAutor, "Id", "nomeAutor");
+            ViewBag.ListaAutores = new SelectList(listaAutor, "idautor", "nameautor");
             return View();
         }
         [HttpPost]
         public IActionResult CadLivro(Livro livro)
         {
-            var listarAutor = _autorRepository.ObterTodosAutores();
-            ViewBag.ListaAutores = new SelectList(listarAutor, "Id", "nomeAutor");
+            var listarAutor = _autorRepository.ObterTodosAutoresAtivo();
+            ViewBag.ListaAutores = new SelectList(listarAutor, "idautor", "nameautor");
             _livroRepository.Cadastrar(livro);
             return RedirectToAction(nameof(Index));
         }
 
         public IActionResult editarLivro(int id)
         {
-            var listaAutor = _autorRepository.ObterTodosAutores();
+            var listaAutor = _autorRepository.ObterTodosAutoresAtivo();
             var ObjAutor = new Livro
             {
-                ListaAutor = (List<Autor>)listaAutor
+                idautor = (List<Autor>)listaAutor
             };
-            ViewBag.ListaAutores = new SelectList(listaAutor, "Id", "nomeAutor");
+            ViewBag.ListaAutores = new SelectList(listaAutor, "idautor", "nameautor");
             return View(_livroRepository.ObterLivro(id));//Pode ser Utilizado com id
         }
         [HttpPost]
         public IActionResult editarLivro(Livro livro)
         {
-            var listaAutor = _autorRepository.ObterTodosAutores();
-            ViewBag.ListaAutores = new SelectList(listaAutor, "Id", "nomeAutor");
+            var listaAutor = _autorRepository.ObterTodosAutoresAtivo();
+            ViewBag.ListaAutores = new SelectList(listaAutor, "idautor", "nameautor");
             _livroRepository.Atualizar(livro);
             return RedirectToAction(nameof(Index));
         }

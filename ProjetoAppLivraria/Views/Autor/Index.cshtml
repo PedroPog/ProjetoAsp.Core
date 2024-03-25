@@ -1,22 +1,21 @@
 ﻿@model IEnumerable<ProjetoAppLivraria.Models.Autor>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista Autor";
 }
 
-<h1>Index</h1>
-
+<h1>Listar Autor</h1>
 <p>
-    <a asp-action="cadautor">Create New</a>
+    <a asp-action="cadautor">Criar novo</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                @Html.DisplayNameFor(model => model.idautor)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.nomeAutor)
+                @Html.DisplayNameFor(model => model.nameautor)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.status)
@@ -28,18 +27,19 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Id)
+                @Html.DisplayFor(modelItem => item.idautor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.nomeAutor)
+                @Html.DisplayFor(modelItem => item.nameautor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.status)
             </td>
             <td>
-                @Html.ActionLink("Edit", "editarAutor", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Editar", "editarAutor", new {  id=item.idautor  }) |
                 @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) | *@
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Deletar", "Delete", new {  id=item.idautor  },
+                new {onclick = "return confirm('Deseja realmente Excluir este Item?');"})
             </td>
         </tr>
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0nX3yk6bDt0dlL+jfm05Qw13MgOi8aXKUTADBapjaKt95VCjBvymCDKDJXcKfCtbhePWzLTUZNMB/3SEpXO99A==",
+  "dgSpecHash": "utg3j/N/5DDK92R9D8OppL2e/gKX+gx5VZskvyXqk9sfhGYQ6L3TWOBDPxKOfXhUNqN0Z5CntIyvTIe59rSVFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\3DS\\Documents\\3ds.2\\SegundoCore\\SegundoCore.csproj",
+  "projectFilePath": "E:\\Users\\pog\\Documents\\asp.netCore\\ProjetoAsp.Core\\SegundoCore\\SegundoCore.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

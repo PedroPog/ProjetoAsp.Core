@@ -1,36 +1,39 @@
 ﻿@model ProjetoAppLivraria.Models.Autor
 
 @{
-    ViewData["Title"] = "CadAutor";
+    ViewData["Title"] = "Cadastrar Autor";
 }
 
-<h1>CadAutor</h1>
+<h1>Cadastrar Autor</h1>
 
-<h4>Autor</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="CadAutor">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="nomeAutor" class="control-label"></label>
-                <input asp-for="nomeAutor" class="form-control" />
-                <span asp-validation-for="nomeAutor" class="text-danger"></span>
+                <label asp-for="nameautor" class="control-label"></label>
+                <input asp-for="nameautor" class="form-control" />
+                <span asp-validation-for="nameautor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="status" class="control-label"></label>
-                <input asp-for="status" class="form-control" />
-                <span asp-validation-for="status" class="text-danger"></span>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.status, new List<SelectListItem>
+                    {
+                    new SelectListItem { Value = "1", Text = "Ativo" },
+                    new SelectListItem { Value = "2", Text = "Inativo" },
+                    })
+                </div>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Voltar para home</a>
 </div>
 
 @section Scripts {

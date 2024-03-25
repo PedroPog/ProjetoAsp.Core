@@ -7,6 +7,7 @@ namespace ProjetoAppLivraria.Repository.Contract
 
         //CRUD
         IEnumerable<Autor> ObterTodosAutores();
+        IEnumerable<Autor> ObterTodosAutoresAtivo();
 
         void Cadastrar(Autor autor);
         void Atualizar(Autor autor);

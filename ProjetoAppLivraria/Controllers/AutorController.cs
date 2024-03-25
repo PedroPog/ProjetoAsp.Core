@@ -27,7 +27,7 @@ namespace ProjetoAppLivraria.Controllers
         public IActionResult CadAutor(Autor autor)
         {
             _autorRepository.Cadastrar(autor);
-            return View();
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult editarAutor(int id)
